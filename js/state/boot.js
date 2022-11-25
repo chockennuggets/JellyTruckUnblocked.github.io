@@ -80,6 +80,14 @@ window.JellyTruck.state.boot = {
         this.game.stage.disableVisibilityChange = true;
         this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 
+        if (window.innerWidth/ window.innerHeight> 1.666) {
+            gameHeight = window.innerHeight;
+            gameWidth= gameHeight* 800/ 480;
+        } else {
+            gameWidth= window.innerWidth;
+            gameHeight= gameWidth* 480/ 800;
+        }
+
         if (!this.game.device.desktop) {
             deviceWidth = window.innerWidth;
             deviceHeight = window.innerHeight;
